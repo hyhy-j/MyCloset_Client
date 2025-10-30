@@ -57,6 +57,7 @@ const RowBetween = styled.div`
   gap: 5px;
 `;
 const Left = styled.div`
+  margin: 2px 0;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -86,7 +87,7 @@ const SectionTitle = styled.p`
 const HScroll = styled.div`
   display: flex;
   gap: 12px;
-  padding-bottom: 6px;
+  padding-bottom: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
 `;
@@ -144,7 +145,11 @@ const Category = () => {
             <img src="/images/notice.png" alt="" />
           </IconBtn>
           <IconBtn>
-            <img src="/images/shoppingBag.png" alt="" />
+            <img
+              src="/images/shoppingBag.png"
+              alt=""
+              onClick={() => navigate("/home/shoppingbag")}
+            />
           </IconBtn>
         </IconRow>
       </Header>
