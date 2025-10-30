@@ -5,6 +5,7 @@ import GlobalStyle from "./styles/GlobalStyle";
 import Intro from "./pages/Intro";
 import MainLayout from "./layouts/MainLayout";
 import Category from "./pages/Category";
+import CategoryBasic from "./pages/CategoryBasic";
 
 const Wrapper = styled.div`
   width: min(393px, 100%);
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Intro />} />
           <Route element={<MainLayout />}>
             <Route path="/category" element={<Category />} />
+            <Route path="/category/basic" element={<CategoryBasic />} />
           </Route>
         </Routes>
       </BrowserRouter>
