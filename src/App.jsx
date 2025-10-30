@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import GlobalStyle from "./styles/GlobalStyle";
 import Intro from "./pages/Intro";
+import MainLayout from "./layouts/MainLayout";
+import Category from "./pages/Category";
 
 const Wrapper = styled.div`
   width: min(393px, 100%);
@@ -25,6 +27,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Intro />} />
+          <Route element={<MainLayout />}>
+            <Route path="/category" element={<Category />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </Wrapper>
