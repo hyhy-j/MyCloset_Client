@@ -76,16 +76,6 @@ const Chip = styled.span`
   border: 1px solid rgba(0, 0, 0, 0.06);
 `;
 
-const Badge = styled.span`
-  font-size: 10px;
-  font-weight: 700;
-  padding: 4px 6px;
-  border-radius: 6px;
-  color: #6b27d8;
-  background: #f1e7ff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-`;
-
 const SectionTitle = styled.p`
   margin: 0;
   font-size: 15px;
@@ -96,12 +86,9 @@ const SectionTitle = styled.p`
 const HScroll = styled.div`
   display: flex;
   gap: 12px;
-  overflow-x: auto;
   padding-bottom: 6px;
-  &::-webkit-scrollbar {
-    display: none;
-  } /* Chrome/Safari */
-  scrollbar-width: none; /* Firefox */
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const CATEGORIES = [

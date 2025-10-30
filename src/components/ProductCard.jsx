@@ -7,12 +7,18 @@ import styled from "styled-components";
  * @param {string} brand      예: "ORDINARY HOLIDAY"
  * @param {string} name       예: "오프숄더 리미티 니트 [KHAKI]"
  * @param {string} ext        이미지 확장자 (기본 'jpg') — png면 'png'로 전달
- * @param {ReactNode} chip    선택: <Chip>Premium</Chip> 같은 배지 JSX
+ * @param {Function} onClick - 클릭 시 실행할 함수
  */
-export default function ProductCard({ imageName, brand, name, ext = "png" }) {
+export default function ProductCard({
+  imageName,
+  brand,
+  name,
+  ext = "png",
+  onClick,
+}) {
   const src = `/images/products/${imageName}.${ext}`;
   return (
-    <Card role="article" aria-label={`${brand} ${name}`}>
+    <Card role="article" aria-label={`${brand} ${name}`} onClick={onClick}>
       <Thumb>
         <img src={src} alt={`${brand} ${name}`} loading="lazy" />
       </Thumb>
@@ -28,6 +34,7 @@ export default function ProductCard({ imageName, brand, name, ext = "png" }) {
 const Card = styled.article`
   min-width: 108px;
   max-width: 108px;
+  cursor: pointer;
 `;
 
 const Thumb = styled.div`

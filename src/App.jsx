@@ -6,6 +6,7 @@ import Intro from "./pages/Intro";
 import MainLayout from "./layouts/MainLayout";
 import Category from "./pages/Category";
 import CategoryBasic from "./pages/CategoryBasic";
+import ProductDetail from "./pages/ProductDetail";
 
 const Wrapper = styled.div`
   width: min(393px, 100%);
@@ -28,6 +29,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Intro />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route element={<MainLayout />}>
             <Route path="/category" element={<Category />} />
             <Route path="/category/basic" element={<CategoryBasic />} />
