@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import background from "/images/background.png";
 
@@ -35,6 +36,14 @@ const Title = styled.h1`
 `;
 
 const Intro = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const t = setTimeout(() => {
+      navigate("/category", { replace: true });
+    }, 3000);
+    return () => clearTimeout(t);
+  }, [navigate]);
+
   return (
     <IntroContainer>
       <Subtitle>오늘의 나를 바꾸는 옷장</Subtitle>

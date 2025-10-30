@@ -359,9 +359,9 @@ const ProductDetail = () => {
   const [sheetOpen, setSheetOpen] = useState(false); // 바텀시트 열림
   const [toastOpen, setToastOpen] = useState(false); // 상단 토스트
   const [opts, setOpts] = useState({
-    membership: true,
+    membership: false,
     rent4: false,
-    rent7: true,
+    rent7: false,
   });
 
   // 기존 toggle 대신 '단일 선택' 전용
@@ -387,7 +387,10 @@ const ProductDetail = () => {
           <IconButton aria-label="알림">
             <img src="/images/notice.png" alt="" />
           </IconButton>
-          <IconButton aria-label="장바구니">
+          <IconButton
+            aria-label="장바구니"
+            onClick={() => navigate("/home/shoppingbag")}
+          >
             <img src="/images/shoppingBag.png" alt="" />
           </IconButton>
         </RightIcons>
@@ -655,7 +658,9 @@ const ProductDetail = () => {
       {toastOpen && (
         <Toast role="status" aria-live="polite">
           <span>장바구니에 상품을 담았어요</span>
-          <GoCart onClick={() => navigate("/cart")}>바로가기</GoCart>
+          <GoCart onClick={() => navigate("/home/shoppingbag")}>
+            바로가기
+          </GoCart>
         </Toast>
       )}
       {/* 바텀시트 */}

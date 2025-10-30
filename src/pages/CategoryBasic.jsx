@@ -72,7 +72,8 @@ const Chip = styled.span`
 `;
 
 const SectionTitle = styled.p`
-  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 5px;
   font-size: 15px;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -154,7 +155,7 @@ const CategoryBasic = () => {
           <IconBtn>
             <img src="/images/notice.png" alt="" />
           </IconBtn>
-          <IconBtn>
+          <IconBtn onClick={() => navigate("/home/shoppingbag")}>
             <img src="/images/shoppingBag.png" alt="" />
           </IconBtn>
         </IconRow>

@@ -49,7 +49,6 @@ const TABS = [
     label: "홈",
     icon: "/icons/home.png",
     iconActive: "/icons/home_fill.png",
-    end: true,
   },
   {
     to: "/category",
